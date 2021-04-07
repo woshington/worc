@@ -29,6 +29,6 @@ class CandidateViewSet(viewsets.ModelViewSet):
                 'id':"Candidato não encontrado!"
             }, status=status.HTTP_404_NOT_FOUND)
 
-class ContactViewSet(generics.UpdateAPIView, viewsets.GenericViewSet):
+class ContactViewSet(generics.RetrieveUpdateAPIView, viewsets.GenericViewSet):
     serializer_class = ContactSerializer
     queryset = Contact.objects.all().order_by("-created_at")
