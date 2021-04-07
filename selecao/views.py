@@ -1,9 +1,9 @@
-from rest_framework import viewsets
+from rest_framework import viewsets, generics
 from rest_framework.decorators import action
 from rest_framework import status
 from rest_framework.response import Response
 from .serializers import CandidateSerializer, ContactSerializer
-from .models import Candidate
+from .models import Candidate, Contact
 # Create your views here.
 
 class CandidateViewSet(viewsets.ModelViewSet):
@@ -28,3 +28,7 @@ class CandidateViewSet(viewsets.ModelViewSet):
             return Response({
                 'id':"Candidato não encontrado!"
             }, status=status.HTTP_404_NOT_FOUND)
+
+class ContactViewSet(generics.UpdateAPIView, viewsets.GenericViewSet):
+    serializer_class = ContactSerializer
+    queryset = Contact.objects.all().order_by("-created_at")
