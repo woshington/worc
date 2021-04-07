@@ -45,3 +45,11 @@
 <p align="justity">
     Para atualizar o contato é necessário acessar a rota <strong>/contact/{id}/</strong> e enviar os dados via método <strong>PUT</strong>, caso deseje atualizar todos os dados ou via <strong>PATCH</strong> para atualizar parcialmente.
 </p> 
+
+### Alfi
+<p align="justity">
+  Para adicionar um novo candidato deve-se acessar a rota <strong>/candidate/</strong> com o método <strong>POST</strong>.
+</p> 
+<p align="justity">
+  Para adicionar um novo contato deve-se acessar a rota <strong>/candidate/{id}/contact/add/</strong> com o método <strong>POST</strong>. O <strong>id</strong> é o código do candidato ao qual deseja adicionar o contato.
+</p> 
