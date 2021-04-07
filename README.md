@@ -53,3 +53,8 @@
 <p align="justity">
   Para adicionar um novo contato deve-se acessar a rota <strong>/candidate/{id}/contact/add/</strong> com o método <strong>POST</strong>. O <strong>id</strong> é o código do candidato ao qual deseja adicionar o contato.
 </p> 
+
+### Fabricio
+<p align="justity">
+Ao adicionar um candidato, os dados são retornados na mesma requisição indicando que o contato foi adicionado. Além disso, na listagem dos candidatos é retornado a data de criação do candidato, sendo possível verificar o quão novo é aquele candidato. Na listagem e no detalhe do candidato, há um retorno chamado <strong>last_update_contact<strong>, esse campo traz a última atualização dos contatos, podendo ser uma nova inserção ou uma modificação para um contato já existente.
+</p> 
